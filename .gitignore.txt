@@ -1,0 +1,13 @@
+# Carpetas de compilación y reportes
+/target/
+/test-output/
+
+# Archivos de configuración de Eclipse
+.settings/
+.project
+.classpath
+
+# Logs y archivos del sistema operativo
+*.log
+.DS_Store
+Thumbs.db

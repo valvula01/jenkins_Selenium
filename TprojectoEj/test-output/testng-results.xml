@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-11-24T11:49:16 AST" name="Default suite" finished-at="2026-11-24T11:49:38 AST" duration-ms="22598">
+    <groups>
+    </groups>
+    <test started-at="2026-11-24T11:49:16 AST" name="Default test" finished-at="2026-11-24T11:49:38 AST" duration-ms="22598">
+      <class name="folderSript.tourAutomation">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:folderSript.tourAutomation@75d4a5c2]" started-at="2026-11-24T11:49:16 AST" name="beforeClass" finished-at="2026-11-24T11:49:29 AST" duration-ms="12743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="loginTour()[pri:0, instance:folderSript.tourAutomation@75d4a5c2]" started-at="2026-11-24T11:49:29 AST" name="loginTour" finished-at="2026-11-24T11:49:38 AST" duration-ms="9537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTour -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:folderSript.tourAutomation@75d4a5c2]" started-at="2026-11-24T11:49:38 AST" name="afterClass" finished-at="2026-11-24T11:49:38 AST" duration-ms="240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- folderSript.tourAutomation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

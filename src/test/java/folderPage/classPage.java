@@ -45,15 +45,24 @@ public class classPage {
 	public void hacerAntes() {
 		
 		 //System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver/chromedriver.exe"); en las versiones actuales de selenioum(4.6 en adelante) no es necesario esto.
-		  ChromeOptions option = new ChromeOptions();
+		  /*ChromeOptions option = new ChromeOptions();
 		  option.addArguments("--guest");
 		  driver = new ChromeDriver(option);
 		  driver.manage().window().maximize();
-		  driver.get(url);
+		  driver.get(url);*/
 		  
 		 /*driver = new ChromeDriver();
 		  driver.manage().window().maximize();
 		  driver.get(url); */
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
+		options.addArguments("--window-size=1920,1080"); // Simula una pantalla Full HD
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
+		driver.get(url);
 	}
 	public void hacerDespues() {
 		

@@ -16,6 +16,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -55,12 +56,23 @@ public class classPage {
 		  driver.manage().window().maximize();
 		  driver.get(url); */
 		
+		//-Para poder trabajar con jenkins en un contenedor de docker
+		// Elimina cualquier línea de WebDriverManager.chromedriver().setup() o System.setProperty()
+
 		ChromeOptions options = new ChromeOptions();
+		options.setBinary("/usr/bin/chromium");
 		options.addArguments("--headless=new");
 		options.addArguments("--window-size=1920,1080"); // Simula una pantalla Full HD
 		options.addArguments("--no-sandbox");
 		options.addArguments("--disable-dev-shm-usage");
-		driver = new ChromeDriver(options);
+		
+
+		// Usa el driver del sistema instalado por apt para que coincida 100% con la versión de Chromium
+		ChromeDriverService service = new ChromeDriverService.Builder()
+		        .usingDriverExecutable(new File("/usr/bin/chromedriver"))
+		        .build();
+
+		driver = new ChromeDriver(service, options);
 		driver.manage().window().maximize();
 		driver.get(url);
 	}
